@@ -1,14 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+const root = document.querySelector("#root")
+
+
+let output = (
+  <div>
+    <h1>index.js</h1>
     <App />
-  </React.StrictMode>
-);
+  </div>
+)
+ReactDOM.render(output,root)
 
-reportWebVitals();
+
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
+
+// reportWebVitals();
