@@ -1,5 +1,71 @@
+:root {
+  font-size: 62.5%;
+
+  --BeautifulPurple:#A64AC9;
+  --Turq: #17E9E0; 
+  --Mustard:#FCCD04;
+  --peachY:#FFB48F;
+  --LesspeachY:#f8bfa3;
+  --Background:#F5E6CC;
+  --textGrey: rgb(12, 12, 12);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+
 .App {
   text-align: center;
 }
 
-
+body{
+  background-color: #A64AC9;
+  color: white;
+}
+.title{
+  color: white;
+  font-size: 6rem;
+}
+/* ul {
+  display: flex;
+  justify-content: space-around;
+} */
+li {
+  display: inline;
+  font-size: 3rem;
+  color: white;
+  margin: 5rem;
+  
+  
+}
+nav{
+  background-color: #17E9E0;
+  padding: 3rem;
+  margin: 3rem;
+}
+nav li a {
+  text-decoration: none;
+  font-size: 4rem;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.cardContainer{
+  display: flex;
+  justify-content:center;
+}
+.workshopCard{
+  color: gray ;
+  background-color: #F5E6CC;
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  font-size: 3rem;
+  padding: 20px;
+  margin: 2rem;
+}
+.img{
+  border-radius: 50%;
+}

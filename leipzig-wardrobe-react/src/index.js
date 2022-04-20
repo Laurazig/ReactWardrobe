@@ -8,7 +8,6 @@ const root = document.querySelector("#root")
 
 let output = (
   <div>
-    <h1>index.js</h1>
     <App />
   </div>
 )
