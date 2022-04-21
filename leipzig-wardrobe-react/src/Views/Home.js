@@ -5,9 +5,9 @@ const Home = () => {
     return (
         <div>
             <h1>A Circular Economy Project</h1>
-            <img src={ShiboriShirt} width="500px"/>
+            <img className="img" src={ShiboriShirt} alt="beautiful T-shirt made from bedsheet and tye-dyed" />
             
-            <div >map</div>
+            
             
         </div>
     )

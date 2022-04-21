@@ -1,14 +1,14 @@
 import React from "react";
-import Shibori from "../Assets/ShiboriRound.jpg"
+import Make from "../Assets/waistcoatSqBig2.jpg"
 
 
 const Create = () => {
     return (
         <div>
-            <h1>Create</h1>
-            <img src={Shibori}/>
+            <h1>Make your own clothes</h1>
+            <img className="img" src={Make} alt="making a waistcoat"/>
             
-            <div >info on how to make your own clothes in Leipzig</div>
+            <div >Tips and resources about fabric shopping and buying / fixing a machine</div>
             
         </div>
     )
