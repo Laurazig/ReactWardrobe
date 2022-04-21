@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router,Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 import Home from "./Views/Home";
 import Create from "./Views/Create";
 import Workshops from "./Views/Workshops";
 import './App.css';
-import NotFound from "./Views/NotFound"; 
+import NotFound from "./Views/NotFound";
+import WorkshopList from "./Views/WorkshopList"; 
 
 function App() {
   const [ workshops, setWorkshops ] = useState([]);
+  const [ name, setName ] = useState("");
+
   useEffect(() =>{
       setWorkshops(pretendFetch)
   },[])
@@ -43,6 +46,8 @@ function App() {
           },
       ]
 }
+
+
   return (
     <div className="App">
         <Router>
@@ -51,17 +56,19 @@ function App() {
             </header>
             <main>
               <Switch>
-                <Route path="/" exact>
-                  <Home />
-                </Route>
+                <Route path="/" exact component={Home} />
                 <Route path="/create" exact>
                   <Create />
                 </Route>
                 <Route path="/workshops" exact>
-                  <Workshops 
-                    workshops={workshops}
-                    setWorkshops={setWorkshops}
+                  <Workshops
+                     workshops = {workshops}
+                     name={props.name}
                   />
+                  
+                </Route>
+                <Route path="/workshop-list" exact>
+                  
                 </Route>
                 <Route path="*" component={NotFound} />
               </Switch>
