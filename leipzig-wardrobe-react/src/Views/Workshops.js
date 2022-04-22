@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Shibori from "../Assets/ShiboriRound.jpg"
 // import { Link } from "react-router-dom";
 import WorkshopList from "./WorkshopList";
@@ -8,9 +8,9 @@ const Workshops = props => {
     const [newName, setNewName] = useState([]);
     console.log(props.workshops)
 
-    const updateNewName = newName => {
-        setNewName(newName)
-    }
+    // const updateNewName = newName => {
+    //     setNewName(newName)
+    // }
     return (
         <div className="workshopContainer" >
             <h1>Workshops in Leipzig</h1>

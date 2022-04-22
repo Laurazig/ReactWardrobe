@@ -75,8 +75,7 @@ function App() {
                 update={updateWorkshop}
               />
             </Route>
-            {/* <Route path="/workshop-list" exact>
-            </Route> */}
+      
             <Route path="*" component={NotFound} />
           </Switch>
         </main>

@@ -17,16 +17,16 @@ const Form = props => {
 
     return (
         <div>
-            <Form  onSubmit={updateWorkshop}>
+            <form  onSubmit={updateWorkshop}>
                 <h2>Add new workshop! (form.js)</h2>
                 <div className="form_div">
-                    <input placeholder="Enter name" value={props.name}onChange={updateNewName} />
+                    <input placeholder="Enter name" value={props.name} onChange={updateNewName} />
                 </div>
                 <div className="form_div">
                     <div className="button"><a target="_blank" >add</a></div>
                 </div>
 
-            </Form>
+            </form>
         </div>
     )
 }

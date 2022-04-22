@@ -5,7 +5,7 @@ import Form from "../Components/Form";
 const WorkshopList = props => {
     return (
         <div className="cardContainer">
-            <ul>
+            <ul id="workshopListUL">
                 {
                     props.workshops.map(obj => {
                         return (

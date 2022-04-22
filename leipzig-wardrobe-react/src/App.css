@@ -30,10 +30,10 @@ body{
   color: white;
   font-size: 6rem;
 }
-/* ul {
+#workshopListUL {
   display: flex;
   justify-content: space-around;
-} */
+}
 li {
   display: inline;
   font-size: 3rem;
