@@ -11,6 +11,11 @@ import NotFound from "./Views/NotFound";
 function App() {
   const [workshops, setWorkshops] = useState([]);
   const [name, setName] = useState("");
+  const [workshop, setWorkshop] = useState("");
+  const [location, setLocation] = useState("");
+  const [date, setDate] = useState("");
+  const [price, setPrice] = useState("");
+  const [link, setLink] = useState("");
 
   useEffect(() => {
     setWorkshops(pretendFetch)
@@ -48,8 +53,25 @@ function App() {
   }
 
   const updateWorkshopName = newName => {
-    setName(newName)
+    setName(newName);
   }
+
+  const updateWorkshopWorkshop = newWorkshop => {
+    setWorkshop(newWorkshop);
+  }
+  const updateWorkshopLocation = newLocation => {
+    setLocation(newLocation);
+  }
+  const updateWorkshopDate = newDate => {
+    setDate(newDate);
+  }
+  const updateWorkshopPrice = newPrice => {
+    setPrice(newPrice);
+  }
+  const updateWorkshopLink = newLink => {
+    setLink(newLink);
+  }
+
 
   const updateWorkshop = newWorkshop => {
     setWorkshops(workshops.concat(newWorkshop));
@@ -71,7 +93,18 @@ function App() {
               <Workshops
                 workshops={workshops}
                 name={name}
+                workshop={workshop}
+                location={location}
+                date={date}
+                price={price}
+                link={link}
                 updateName={updateWorkshopName}
+                updateWorkshop={updateWorkshopWorkshop}
+                updateLocation={updateWorkshopLocation}
+                updateDate={updateWorkshopDate}
+                updatePrice={updateWorkshopPrice}
+                updateLink={updateWorkshopLink}
+                
                 update={updateWorkshop}
               />
             </Route>

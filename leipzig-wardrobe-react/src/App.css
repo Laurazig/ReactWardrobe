@@ -59,17 +59,18 @@ nav li a {
 .cardContainer{
   display: flex;
   justify-content:center;
-  /* width: 2000px; */
+  /* width: 50%; */
 }
 /* .workshopLi{
   display: flex;
   justify-content: center;
 }   doesnt work & strange alignment */
+
 .workshopCard{
   color: gray ;
   background-color: #F5E6CC;
   width: 500px;
-  height: 350px;
+  height: 400px;
   border-radius: 20px;
   font-size: 3rem;
   padding: 20px;
@@ -113,3 +114,23 @@ label, strong{
   color:purple
 }
 
+#addNewWorkshopCard{
+  background-color: #FCCD04;
+  width: 600px;
+  border-radius: 50px;
+}
+form{
+  width: 600px;
+}
+#buttonAdd{
+  background-color: #17E9E0;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 7px 5px rgba(128, 128, 128, 0.507);
+  margin: 40px;
+  color: grey;
+}
+.form_div{
+  display: block;
+}

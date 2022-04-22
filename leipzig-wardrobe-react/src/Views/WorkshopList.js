@@ -22,27 +22,21 @@ const WorkshopList = props => {
                         )
                     })
                 }
-                <li>
-                    <div className="workshopCard">
-                        <label>Name: (workshoplist.js)</label>
-                        <input></input>
-                        {/* <label>Workshop:</label>
-                            <input></input>
-                            <label>Location:</label>
-                            <input></input>
-                            <label>Date:</label>
-                            <input></input>
-                            <label>Price:</label>
-                            <input></input>
-                            <label>link:</label>
-                            <input></input> */}
-                    </div>
-                </li>
             </ul>
             <Form
                 workshops={props.workshops}
                 name={props.name}
+                workshop={props.workshop}
+                location={props.location}
+                date={props.date}
+                price={props.price}
+                link={props.link}
                 updateName={props.updateName}
+                updateWorkshop={props.updateWorkshop}
+                updateLocation={props.updateLocation}
+                updateDate={props.updateDate}
+                updatePrice={props.updatePrice}
+                updateLink={props.updateLink}
                 update={props.update}
             />
         </div>
