@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Shibori from "../Assets/ShiboriRound.jpg"
 // import { Link } from "react-router-dom";
 import WorkshopList from "./WorkshopList";
+import FormRegister from "../Components/FormRegister";
 
 const Workshops = props => {
 
@@ -26,6 +27,7 @@ const Workshops = props => {
                 updateLink={props.updateLink}
                 update={props.update}
             />
+            <FormRegister />
         </div>
     )
 }

@@ -1,7 +1,7 @@
                  App.js
                    v
-                Workshop.js
-                   v
-               WorkshopList.js
+                _______Workshop.js _________
+                   v                 v
+               WorkshopList.js    FormRegister
                    v
                  Form.js

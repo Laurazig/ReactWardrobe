@@ -76,6 +76,11 @@ function App() {
   const updateWorkshop = newWorkshop => {
     setWorkshops(workshops.concat(newWorkshop));
     setName("");
+    setWorkshop("");
+    setLocation("");
+    setDate("");
+    setPrice("");
+    setLink("");
   }
   return (
     <div className="App">

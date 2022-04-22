@@ -115,9 +115,11 @@ label, strong{
 }
 
 #addNewWorkshopCard{
-  background-color: #FCCD04;
+  /* display: block; */
+  background-color: #F5E6CC;
   width: 600px;
   border-radius: 50px;
+  
 }
 form{
   width: 600px;
@@ -131,6 +133,33 @@ form{
   margin: 40px;
   color: grey;
 }
+
 .form_div{
   display: block;
+}
+
+.divInput{
+  margin: 2rem;
+}
+.divFormReg{
+  display: flex;
+  justify-content: center;
+}
+
+.formReg{
+  width: 800px;
+  height: 900px;
+  background-color:#FCCD04;
+  border-radius: 70px;
+  box-shadow: 0 0 10px 5px lightgray;
+  margin: 30rem;
+}
+
+#h2AddWorkshop{
+  color:#A64AC9;
+}
+input{
+  border-radius: 40px;
+  height: 35px;
+  margin: 20px;
 }
