@@ -8,9 +8,9 @@ Presentations: ~ 0.5 days
 ## 2. Instructions:
 Create a React SPA on a theme of your choice!
 Try to use as much of the material we have covered during the module as you can. This can include, but is not limited to:
-The useState, useEffect and useContext hooks.
-Event handlers (e.g. onClick, onChange, onSubmit) to respond to user actions
-Multiple "view" components
+- The useState, useEffect and useContext hooks.
+-Event handlers (e.g. onClick, onChange, onSubmit) to respond to user actions
+-Multiple "view" components
 Routing using React Router (to move between views in your app), including at least one dynamic route
 Using props to pass data down one or two levels.
 JSX lists created from an original data array using .map()
