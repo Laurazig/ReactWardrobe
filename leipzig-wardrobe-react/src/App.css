@@ -148,7 +148,7 @@ form{
 
 .formReg{
   width: 700px;
-  height: 700px;
+  height: 1100px;
   background-color:#FCCD04;
   border-radius: 70px;
   box-shadow: 0 0 10px 5px lightgray;
@@ -166,4 +166,12 @@ input{
 
 form div {
   margin: 30px;
+}
+
+.errorVisible{
+  display:block;
+  color: red;
+}
+.errorNotVisible{
+  display:none;
 }

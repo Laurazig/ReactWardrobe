@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
-
-
-
 const FormRegister = () => {
 
     const [ userName, setUserName ] = useState("")
+    const [ userEmail, setUserEmail ] = useState("")
     const [ num, setNum ] = useState("")
     const [ select, setSelect  ] = useState("")
     const [ comment, setComment ] = useState("")
     const [ newsLetter, setNewsLetter ] = useState("")
+
+    const nameErrorDiv = React.createRef();
+    const emailErrorDiv = React.createRef();
+
 
     const updateData = event =>{
         switch(event.target.userName) {
@@ -45,13 +47,29 @@ const FormRegister = () => {
         setNewsLetter("");
     }
 
+    const checkNameOnBlur = () => {
+        // console.log("the name input lost focus") 
+        if (userName.trim().length === 0) {
+            nameErrorDiv.current.style.display = "block";
+        }  else {
+            nameErrorDiv.current.style.display = "none";
+        }
+    }
+
     return(
         <div className="divFormReg">
             <form className="formReg" onSubmit={userData} >
                 <h2>Register for a workshop (formRegister.js)</h2>
                 <div>
                     <label htmlFor="user_name">Name:</label>
-                    <input id="user_name" name="user_name" onChange={updateData} />
+                    <input id="user_name" name="user_name" onChange={updateData} onBlur={checkNameOnBlur} />
+                    <div className="errorVisible" ref={nameErrorDiv}>Please enter your name</div>
+                </div>
+
+                <div>
+                    <label htmlFor="user_email">Email: </label>
+                    <input id="user_email" name="user_email" onChange={updateData} />
+                    <div className="errorVisible" ref={emailErrorDiv}>Please enter your correct email</div>
                 </div>
                 
                 <div>
@@ -72,12 +90,14 @@ const FormRegister = () => {
                     <label htmlFor="comment">Comment:   </label>
                     <textarea id="comment" name="comment" onChange={updateData} value={comment}></textarea>
                 </div>
-
+                
                 <div>
-                    <input className="radio_input radio_input_right" type="radio" name="news_letter" onChange={updateData} value="yes" checked={newsLetter === "yes"}/>
+                    <label>Signup for the newsletter !</label>
+                    <input className="radio_input radio_input_right" type="radio" name="news_letter" onChange={updateData} value="yes" />
                     <label className="radio_label">Yes</label> 
-                    <input className="radio_input radio_input_left" type="radio" name="news_letter" onChange={updateData} value="yes" checked={newsLetter !== "yes"}/>
-                    <label className="radio_label">Yes</label> 
+                    <input className="radio_input radio_input_left" type="radio" name="news_letter" onChange={updateData} value="yes"/>
+{/* why is checked on no?  checked={newsLetter !== "yes"}*/}
+                    <label className="radio_label">No</label> 
                 </div>
                 <div className="form_div">
                     <button id="buttonAdd">Submit</button>
