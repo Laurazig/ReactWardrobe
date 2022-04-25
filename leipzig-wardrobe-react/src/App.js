@@ -7,7 +7,7 @@ import Workshops from "./Views/Workshops";
 import './App.css';
 import NotFound from "./Views/NotFound";
 
-
+//state for: add new workshop (form.js)
 function App() {
   const [workshops, setWorkshops] = useState([]);
   const [name, setName] = useState("");
@@ -34,7 +34,7 @@ function App() {
       {
         id: "2",
         name: "Daniela Witt",
-        workshop: "Hoodie/T-shirt",
+        workshop: "Alladin trousers",
         location: "Leutzsch",
         date: "23.04.22",
         price: "60€",

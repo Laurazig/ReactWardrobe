@@ -147,12 +147,12 @@ form{
 }
 
 .formReg{
-  width: 800px;
-  height: 900px;
+  width: 700px;
+  height: 700px;
   background-color:#FCCD04;
   border-radius: 70px;
   box-shadow: 0 0 10px 5px lightgray;
-  margin: 30rem;
+  /* margin: 30rem; */
 }
 
 #h2AddWorkshop{
@@ -162,4 +162,8 @@ input{
   border-radius: 40px;
   height: 35px;
   margin: 20px;
+}
+
+form div {
+  margin: 30px;
 }
