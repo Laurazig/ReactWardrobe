@@ -17,13 +17,14 @@ FORMREGISTER.js -  workshop registration
 
 
 * RADIO.  {/* why is checked on no? */} -      checked={newsLetter !== "yes"}
-* WHOLE FORM : if else statement
+* WHOLE FORM : SUBMIT-  if else statement
 *    
   newsLetter <empty string>
+  click submit and name doesn'T reset
 
 
   
 ##to do
 
- nav hover 
+ nav on page  
 search function on workshop cards

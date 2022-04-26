@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+//import { FormContext } from "../App"
 
 const Form = props => {
+
+   // const form = useContext(FormContext)
+
     const updateWorkshop = event => {
         event.preventDefault();
 
         let newWorkshop = {
             id: (props.workshops.length + 1).toString(),
+            // name: form.name,
             name: props.name,
             workshop: props.workshop,
             location:props.location,

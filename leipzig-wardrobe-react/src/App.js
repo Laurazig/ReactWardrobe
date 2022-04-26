@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 import Home from "./Views/Home";
 import Create from "./Views/Create";
@@ -19,6 +19,8 @@ function App() {
   const [link, setLink] = useState("");
 
   // const [ searchTerm, setSearchTerm ] =useState("");
+
+  //export const FormContext = createContext();
 
   useEffect(() => {
     setWorkshops(pretendFetch)
@@ -105,7 +107,7 @@ function App() {
             <Route path="/workshops" exact>
               <Workshops
                 workshops={workshops}
-                name={name}
+                // name={name}
                 workshop={workshop}
                 location={location}
                 date={date}
@@ -123,7 +125,14 @@ function App() {
                 // searchTerm={searchTerm}
                 // handleChangeSearch={handleChangeSearch}
               />
+              
+              {/* <FormContext.Provider value={{
+                name:name
+            }} >
+              <Workshops />
+            </FormContext.Provider> */}
             </Route>
+            
       
             <Route path="*" component={NotFound} />
           </Switch>
