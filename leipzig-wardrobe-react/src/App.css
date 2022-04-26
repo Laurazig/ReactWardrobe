@@ -148,7 +148,7 @@ form{
 
 .formReg{
   width: 700px;
-  height: 1100px;
+  height: 950px;
   background-color:#FCCD04;
   border-radius: 70px;
   box-shadow: 0 0 10px 5px lightgray;
@@ -195,4 +195,8 @@ input[type=radio] {
 
 .workshopFormBlock{
   display: block;
+}
+
+.liNav:hover{
+  color: #A64AC9;
 }

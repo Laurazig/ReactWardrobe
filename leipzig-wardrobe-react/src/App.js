@@ -7,6 +7,7 @@ import Workshops from "./Views/Workshops";
 import './App.css';
 import NotFound from "./Views/NotFound";
 
+
 //state for: add new workshop (form.js)
 function App() {
   const [workshops, setWorkshops] = useState([]);
@@ -17,9 +18,12 @@ function App() {
   const [price, setPrice] = useState("");
   const [link, setLink] = useState("");
 
+  // const [ searchTerm, setSearchTerm ] =useState("");
+
   useEffect(() => {
     setWorkshops(pretendFetch)
   }, [])
+
   const pretendFetch = () => {
     return [
       {
@@ -81,7 +85,11 @@ function App() {
     setDate("");
     setPrice("");
     setLink("");
-  }
+  }  
+  
+  // const handleChangeSearch =(event) =>{
+  //     setSearchTerm(event.target.value)
+  // }
   return (
     <div className="App">
       <Router>
@@ -109,8 +117,11 @@ function App() {
                 updateDate={updateWorkshopDate}
                 updatePrice={updateWorkshopPrice}
                 updateLink={updateWorkshopLink}
-                
                 update={updateWorkshop}
+
+                
+                // searchTerm={searchTerm}
+                // handleChangeSearch={handleChangeSearch}
               />
             </Route>
       

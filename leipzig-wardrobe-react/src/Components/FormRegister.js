@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createRef } from "react";
+import Workshops from "../Views/Workshops";
 
 const FormRegister = () => {
 
@@ -12,6 +13,7 @@ const FormRegister = () => {
     const [emailChanged, setEmailChanged] = useState(false)
     const [numChanged, setNumChanged] = useState(false)
     const [commentChanged, setCommentChanged] = useState(false)
+    const [newsLetterChanged, setNewsLetterChanged] = useState(false)
 
 
     const nameErrorDiv = createRef();
@@ -51,6 +53,7 @@ const FormRegister = () => {
                 break;
             case "newsLetter":
                 setNewsLetter(event.target.value);
+                setNewsLetterChanged(true)
                 break;
             default:
                 break;
@@ -73,26 +76,53 @@ const FormRegister = () => {
         }
     }
 
-    // const submitForm = event => {
-    //     event.preventDefault();
-    //     if ( userName.length)
-    // }
 
-    const userData = event => {
+            // const userData = event => {
+            //     event.preventDefault();
+            //     console.log("userName", userName);
+            //     console.log("num", num);
+            //     console.log("select", select);
+            //     console.log("comment", comment);
+            //     console.log("newsLetter", newsLetter);
+            //     setUserName("");
+            //     setNameChanged(false)
+            //     setUserEmail("");
+            //     setNum("");
+            //     setNumChanged(false)
+            //     setSelect("default");
+            //     setComment("");
+                
+            // }; 
+    const submitForm = event => {
         event.preventDefault();
-        console.log("userName", userName);
-        console.log("num", num);
-        console.log("select", select);
-        console.log("comment", comment);
-        console.log("newsLetter", newsLetter);
-        setUserName("");
-        setUserEmail("");
-        setNum("");
-        setNumChanged(false)
-        setSelect("default");
-        setComment("");
-        setNewsLetter("");
+        if ( userName.length > 0 
+            && /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[A-Za-z]+$/.test(userEmail) 
+            && num.length > 0 
+            && comment.length > 20 
+            && Workshops.value !=="default"   ) {
+                console.log("userName", userName);
+                console.log("num", num);
+                console.log("select", select);
+                console.log("comment", comment);
+                console.log("newsLetter", newsLetter);
+                setUserName("");
+                setNameChanged(false)
+                setUserEmail("");
+                setEmailChanged(false);
+                setNum("");
+                setNumChanged(false)
+                setSelect("default");
+                setComment("");
+                setCommentChanged(false); 
+        } else {
+            if (userName.length ===0 ) {
+                alert("Please enter your name")
+            }
+        }
+
     }
+
+    
 
     // const checkNameOnBlur = () => {
     //     console.log("the name input lost focus")
@@ -107,7 +137,7 @@ const FormRegister = () => {
 
     return (
         <div className="divFormReg">
-            <form className="formReg" onSubmit={userData} >
+            <form className="formReg" onSubmit={submitForm} >
                 <h2>Register for a workshop (formRegister.js)</h2>
                 <div>
                     <label className="workshopFormBlock" htmlFor="user_name">Name:</label>
@@ -149,14 +179,14 @@ const FormRegister = () => {
 
                 <div>
                     <label className="workshopFormBlock">Signup for the newsletter !</label>
-                    <input className="radio_input radio_input_right" type="radio" name="news_letter" onChange={updateData} value="yes" />
+                    <input className="radio_input radio_input_right" type="radio" name="news_letter" onChange={updateData} value="newsLetter" />
                     <label className="radio_label">Yes</label>
-                    <input className="radio_input radio_input_left" type="radio" name="news_letter" onChange={updateData} value="yes" />
+                    <input className="radio_input radio_input_left" type="radio" name="news_letter" onChange={updateData} value="newsLetter" />
                     {/* why is checked on no?  checked={newsLetter !== "yes"}*/}
                     <label className="radio_label">Maybe later</label>
                 </div>
                 <div className="form_div">
-                    <button id="buttonAdd">Submit</button>
+                    <button id="buttonAdd" >Submit</button>
                 </div>
 
             </form>

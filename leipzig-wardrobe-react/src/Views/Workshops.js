@@ -3,9 +3,10 @@ import Shibori from "../Assets/ShiboriRound.jpg"
 // import { Link } from "react-router-dom";
 import WorkshopList from "./WorkshopList";
 import FormRegister from "../Components/FormRegister";
+//import SearchResults from "./Components/SearchResults"
 
 const Workshops = props => {
-
+    
 
     return (
         <div className="workshopContainer" >
@@ -28,6 +29,13 @@ const Workshops = props => {
                 update={props.update}
             />
             <FormRegister />
+            {/* <SearchResults 
+                workshops={props.workshops}
+                searchTerm={searchTerm}
+                handleChangeSearch={handleChangeSearch}
+            
+            
+            /> */}
         </div>
     )
 }
