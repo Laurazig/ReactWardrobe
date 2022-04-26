@@ -161,17 +161,38 @@ form{
 input{
   border-radius: 40px;
   height: 35px;
-  margin: 20px;
+  ;
 }
 
 form div {
   margin: 30px;
+  
 }
 
 .errorVisible{
   display:block;
   color: red;
+  font-size: 1.5rem;
+  border: 0px;
+  margin: 0px;
 }
 .errorNotVisible{
   display:none;
+}
+
+select{
+  font-size: 2.5rem;
+
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 4%;
+  height: 2em;
+}
+
+
+
+.workshopFormBlock{
+  display: block;
 }
