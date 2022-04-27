@@ -107,7 +107,7 @@ function App() {
             <Route path="/workshops" exact>
               <Workshops
                 workshops={workshops}
-                // name={name}
+                name={name}
                 workshop={workshop}
                 location={location}
                 date={date}

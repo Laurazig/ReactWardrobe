@@ -11,6 +11,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ##issues
 
 FORMREGISTER.js -  workshop registration
@@ -23,5 +34,10 @@ FORMREGISTER.js -  workshop registration
   
 ##to do
 change props to useContext
-nav- show which page   
 search function on workshop cards
+nav- show which page
+
+contact list
+
+
+
