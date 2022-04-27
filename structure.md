@@ -17,15 +17,11 @@ FORMREGISTER.js -  workshop registration
 
 
 * RADIO.  {/* why is checked on no? */} -      checked={newsLetter !== "yes"}
-* WHOLE FORM : SUBMIT-  if else statement
-
-*   newsLetter <empty string>
-  click submit and name doesn'T reset
+* WHOLE FORM : SUBMIT-  click submit and name & radiButtons dont reset
 
 
   
 ##to do
-
+change props to useContext
 nav- show which page   
 search function on workshop cards
-change props to useContext

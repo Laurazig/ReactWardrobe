@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createRef } from "react";
-import Workshops from "../Views/Workshops";
+//import Workshops from "../Views/Workshops";
 
-const FormRegister = () => {
+const FormRegister = props => {
 
     const [userName, setUserName] = useState("")
     const [userEmail, setUserEmail] = useState("")
@@ -51,7 +51,7 @@ const FormRegister = () => {
                 setComment(event.target.value);
                 setCommentChanged(true);
                 break;
-            case "newsLetter":
+            case "news_letter":
                 setNewsLetter(event.target.value);
                 setNewsLetterChanged(true)
                 break;
@@ -99,7 +99,7 @@ const FormRegister = () => {
             && /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[A-Za-z]+$/.test(userEmail) 
             && num.length > 0 
             && comment.length > 20 
-            && Workshops.value !=="default"   ) {
+            && select !=="default"   ) {
                 console.log("userName", userName);
                 console.log("num", num);
                 console.log("select", select);
@@ -118,6 +118,24 @@ const FormRegister = () => {
             if (userName.length ===0 ) {
                 alert("Please enter your name")
             }
+            if (userEmail.length === 0 ) {
+                alert("please enter your email")
+            }
+            if (/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[A-Za-z]+$/.test(userEmail) === false ) {
+                alert("please enter your email in the correct format")
+            }
+            if (num.length === 0 ) {
+                alert("please state how many people are going")
+            }
+            if (comment.length <21 ) {
+                alert("Comment length should be over 20 characters long")
+            }
+            if (select === "default" ) {
+                alert("please select your workshop")
+            } else{
+                alert("there is a problem with the data you entered")
+            }
+            //console.log("problem")
         }
 
     }
@@ -179,9 +197,9 @@ const FormRegister = () => {
 
                 <div>
                     <label className="workshopFormBlock">Signup for the newsletter !</label>
-                    <input className="radio_input radio_input_right" type="radio" name="news_letter" onChange={updateData} value="newsLetter" />
+                    <input className="radio_input radio_input_right" type="radio" name="news_letter" onClick={updateData} value="yes" />
                     <label className="radio_label">Yes</label>
-                    <input className="radio_input radio_input_left" type="radio" name="news_letter" onChange={updateData} value="newsLetter" />
+                    <input className="radio_input radio_input_left" type="radio" name="news_letter" onClick={updateData} value="no" />
                     {/* why is checked on no?  checked={newsLetter !== "yes"}*/}
                     <label className="radio_label">Maybe later</label>
                 </div>
